@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Java Haven</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+   body{
+    display: grid;
+    grid-template-columns: 200px 1fr 1fr;
+    grid-template-rows: 100px 1fr 50px;
+    grid-template-areas: 
+      "header header header"
+      "nav main main"
+      "nav footer footer";
+      min-height: 100vh;
+      color: rgb(255, 255, 255)
+   } 
+
+   .header{
+    grid-area: header;
+    background-color:#3e2723;
+   }
+
+  .nav{
+    grid-area: nav;
+    background-color:#553b31;
+    color: white
+  }
+
+  .nav ul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav a{
+    color: white
+  }
+
+  .main-content{
+    grid-area: main;
+    background-color:#8c6455;
+    justify-content: space-evenly;
+  }
+
+  .footer{
+  grid-area: footer;
+  text-align: center;
+  background-color:#3e2723;
+  display: flex;  /
+  align-items: center;  
+  justify-content: center;  
+}
+
+  .flex-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+  }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <h1>Java Haven</h1>
+    <p>Your daily dose of caffeine and comfort.</p>
+  </header>    
+  <nav class="nav">
+    <ul>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  
+  <main class="main-content">
+    <h2>Featured Coffees</h2>
+    <div class="flex-container">
+      <div class="flex-item">Espresso</div>
+      <div class="flex-item">Cappuccino</div>
+      <div class="flex-item">Latte</div>
+      <div class="flex-item">Mocha</div>
+    </div>
+  </main>
+  
+  <footer class="footer">
+    <p>&copy; 2025 Java Haven. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
